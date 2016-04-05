@@ -2,6 +2,7 @@
 package Account;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -15,7 +16,7 @@ public class Account implements AccountPrototype {
     private String _password;
     private String _firstName;
     private String _lastName;
-    private ArrayList _permissions;
+    private List _permissions;
 
     public Account(String pUserName, String pPassword, String pFirstName, String pLastName) 
     {
@@ -46,7 +47,7 @@ public class Account implements AccountPrototype {
         this._lastName = plastName;
     }
 
-    public void setPermissions(ArrayList pPermissions) 
+    public void setPermissions(List pPermissions) 
     {
         this._permissions = pPermissions;
     }
@@ -72,7 +73,7 @@ public class Account implements AccountPrototype {
         return _lastName;
     }
 
-    public ArrayList getPermissions() 
+    public List getPermissions() 
     {
         return _permissions;
     }
@@ -83,7 +84,14 @@ public class Account implements AccountPrototype {
     }
 
     @Override
-    public AccountPrototype clone() 
+    public String toString() {
+        return "Account{" + "_userName = " + _userName + ", _password = " + _password + ", _firstName = " + _firstName + ", _lastName = " + _lastName + '}';
+    }
+    
+    
+
+    @Override
+    public Account clone() 
     {
         
         Account account = null;
