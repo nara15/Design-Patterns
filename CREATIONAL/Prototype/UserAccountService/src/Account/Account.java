@@ -16,7 +16,7 @@ public class Account implements AccountPrototype {
     private String _password;
     private String _firstName;
     private String _lastName;
-    private List _permissions;
+    private  List _permissions;
 
     public Account(String pUserName, String pPassword, String pFirstName, String pLastName) 
     {
