@@ -1,9 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package customerbilling;
+
+import billingStrategy.Customer;
+import billingStrategy.HappyHourBilling;
+import billingStrategy.NormalBilling;
 
 /**
  *
@@ -15,7 +15,18 @@ public class CustomerBilling {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+       
+        Customer customer = new Customer(new NormalBilling());
+        
+        //Normal billing
+        customer.addDrinkPrice(1.0, 1);
+        
+        //Start Happy Hour
+        customer.setStrategy(new HappyHourBilling());
+        customer.addDrinkPrice(1.0, 2);
+        
+        //The customer pays
+        customer.printBill();
     }
     
 }

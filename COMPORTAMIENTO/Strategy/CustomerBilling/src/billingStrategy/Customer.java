@@ -1,6 +1,7 @@
 
 package billingStrategy;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -14,6 +15,7 @@ public class Customer {
 
     public Customer(IBillingStrategy pBillingStrategy) 
     {
+        this._drinksPrices = new ArrayList<>();
         this._strategy = pBillingStrategy;
     }
 
@@ -22,7 +24,7 @@ public class Customer {
         this._strategy = pBillingStrategy;
     }
     
-    public void add(double pDrinkPrice, int pQuantity)
+    public void addDrinkPrice(double pDrinkPrice, int pQuantity)
     {
         double totalDrinkPrice = pDrinkPrice * pQuantity;
         _drinksPrices.add(_strategy.getPrice(totalDrinkPrice));
