@@ -61,9 +61,9 @@ public class CreditCardStrategy implements PaymentStrategy {
     }
 
     @Override
-    public void pay(float pAmount) 
+    public void pay(double pAmount) 
     {
-        System.out.println(pAmount + "paid with credi/debir card");
+        System.out.println(pAmount + " paid with credi/debit card");
     }
     
     

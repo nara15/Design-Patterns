@@ -7,6 +7,6 @@ package shopStrategy;
  */
 public interface PaymentStrategy {
     
-    public void pay(float pAmount);
+    public void pay(double pAmount);
     
 }

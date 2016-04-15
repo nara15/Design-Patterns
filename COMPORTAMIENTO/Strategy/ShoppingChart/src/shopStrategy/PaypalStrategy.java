@@ -37,7 +37,7 @@ public class PaypalStrategy implements PaymentStrategy {
     }
 
     @Override
-    public void pay(float pAmount)
+    public void pay(double pAmount)
     {
         System.out.println(pAmount + " paid using Paypal");
     }

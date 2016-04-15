@@ -1,6 +1,11 @@
 
 package shoppingchart;
 
+import shopStrategy.CreditCardStrategy;
+import shopStrategy.Item;
+import shopStrategy.PaypalStrategy;
+import shopStrategy.ShoppingChart;
+
 /**
  *
  * @author jonaranjo
@@ -12,6 +17,22 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        
+        ShoppingChart cart = new ShoppingChart();
+         
+        Item item1 = new Item("1234", 10);
+        Item item2 = new Item("5678",40);
+         
+        cart.addItem(item1);
+        cart.addItem(item2);
+         
+        //pay by paypal
+        cart.pay(new PaypalStrategy("myemail@example.com", "mypwd"));
+         
+        //pay by credit card
+        cart.pay(new CreditCardStrategy("Pankaj Kumar", "1234567890123456", "786", "12/15"));
+        
     }
     
 }
