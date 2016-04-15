@@ -16,7 +16,7 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        // http://www.journaldev.com/1754/strategy-design-pattern-in-java-example-tutorial
         
         
         ShoppingChart cart = new ShoppingChart();
